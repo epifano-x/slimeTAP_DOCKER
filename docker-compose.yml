@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db_mysql:
+    container_name: db_mysql
+    build:
+      context: ./DB
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3306:3306
