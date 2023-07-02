@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\FACULDADE\\slimeTAP-main\\SlimeTAP.csproj": {}
+    "D:\\FACULDADE\\dokerslime\\slimeTAP-main\\SlimeTAP.csproj": {}
   },
   "projects": {
-    "d:\\FACULDADE\\slimeTAP-main\\SlimeTAP.csproj": {
+    "D:\\FACULDADE\\dokerslime\\slimeTAP-main\\SlimeTAP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\FACULDADE\\slimeTAP-main\\SlimeTAP.csproj",
+        "projectUniqueName": "D:\\FACULDADE\\dokerslime\\slimeTAP-main\\SlimeTAP.csproj",
         "projectName": "SlimeTAP",
-        "projectPath": "d:\\FACULDADE\\slimeTAP-main\\SlimeTAP.csproj",
+        "projectPath": "D:\\FACULDADE\\dokerslime\\slimeTAP-main\\SlimeTAP.csproj",
         "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
-        "outputPath": "d:\\FACULDADE\\slimeTAP-main\\obj\\",
+        "outputPath": "D:\\FACULDADE\\dokerslime\\slimeTAP-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -63,6 +63,10 @@
             "Microsoft.EntityFrameworkCore.SQLite": {
               "target": "Package",
               "version": "[7.0.8, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
