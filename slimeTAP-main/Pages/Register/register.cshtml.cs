@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -7,11 +8,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using slimeTAP.Models;
 using SlimeTAP.RazorPages.Data;
-using System.ComponentModel.DataAnnotations;
 
 namespace SlimeTAP.Pages.Register
 {
-    public class RegisterModel : PageModel 
+    public class RegisterModel : PageModel
     {
         private readonly ILogger<RegisterModel> _logger;
         private readonly AppDbContext _dbContext;
@@ -20,7 +20,7 @@ namespace SlimeTAP.Pages.Register
         {
             _logger = logger;
             _dbContext = dbContext;
-            
+
             Usuario = new UsuarioModel();
             ConfirmarSenha = "";
         }
@@ -50,14 +50,24 @@ namespace SlimeTAP.Pages.Register
                     return Page();
                 }
 
-                // Restante do código...
-
-
-                // Verificar se o e-mail já está em uso
-                var emailExists = _dbContext.Set<UsuarioModel>().FirstOrDefault(u => u.Email == Usuario.Email);
-                if (emailExists != null)
+                // Verificar se o tamanho do nome de usuário é maior que 5 caracteres
+                if (Usuario.UsuarioNome.Length <= 5)
                 {
-                    ModelState.AddModelError(string.Empty, "E-mail já está em uso.");
+                    ModelState.AddModelError(string.Empty, "O nome de usuário deve ter no minimo 6 caracteres.");
+                    return Page();
+                }
+
+                // Verificar se a senha tem mais que 8 caracteres
+                if (Usuario.Senha.Length <= 8)
+                {
+                    ModelState.AddModelError(string.Empty, "A senha deve ter mais de 8 caracteres.");
+                    return Page();
+                }
+
+                // Verificar se o email é válido usando DataAnnotations
+                if (!IsValidEmail(Usuario.Email))
+                {
+                    ModelState.AddModelError(string.Empty, "O email fornecido é inválido.");
                     return Page();
                 }
 
@@ -85,6 +95,20 @@ namespace SlimeTAP.Pages.Register
             }
 
             return Page();
+        }
+
+        // Método para verificar se o email é válido usando DataAnnotations
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var emailAttribute = new EmailAddressAttribute();
+                return emailAttribute.IsValid(email);
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
