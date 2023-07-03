@@ -1,0 +1,26 @@
+@page
+@model SlimeTAP.Pages.Loading.loading
+@{
+    ViewData["Title"] = "loading";
+}
+@{
+    Layout = ""; // Pode ser vazio ou null
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SlimeTAP</title>
+    <link rel="stylesheet" href="~/css/loading.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="loading-container">
+        <img src="~/img/loading.gif" alt="Loading" class="loading-gif">
+        <div class="loading-text" id="loadingText"></div>
+
+    </div>
+
+
+
+    <script src="~/js/loading.js" asp-append-version="true"></script>
+</body>
