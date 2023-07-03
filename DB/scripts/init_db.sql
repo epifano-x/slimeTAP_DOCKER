@@ -31,5 +31,6 @@ INSERT INTO Usuario (UsuarioNome, Senha, Email, Moeda, MoedaTotal, Level, Xp, Ni
 VALUES
     ('Joao', 'senha123', 'joao@email.com', 100.5, 500.75, 5, 1000, 2, 10, 5, 1.5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3),
     ('Maria', 'senha456', 'maria@email.com', 50.25, 250.35, 3, 500, 1, 5, 2, 1.2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4),
-    ('Pedro', 'senha789', 'maria@email.com', 10.75, 100.5, 2, 250, 1, 2, 2, 1.1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2);
+    ('Pedro', 'senha789', 'maria@email.com', 10.75, 100.5, 2, 250, 1, 2, 2, 1.1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2),
+    ('asd', 'asd', 'asd@email.com', 10000.75, 10000.75, 2500, 2500, 10000, 20000, 20000, 1.1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2);
 

@@ -19,3 +19,14 @@ services:
         - 60001:80
       depends_on:
         - db_mysql
+
+  razor:
+    container_name: razor
+    build:
+      context: ./razor
+      dockerfile: Dockerfile
+    restart: always
+    ports: 
+      - 60002:80
+    depends_on:
+      - db_mysql

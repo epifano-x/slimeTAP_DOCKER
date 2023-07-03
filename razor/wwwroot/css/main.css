@@ -1,0 +1,459 @@
+html {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+
+  
+  html {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+  }
+  
+  body {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-image: url("../img/background.jpg");
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    overflow: hidden;
+    
+  }
+  
+  html::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0); /* Ajuste a opacidade da máscara conforme necessário */
+    pointer-events: none;
+    backdrop-filter: blur(1px); /* Ajuste o valor do desfoque conforme necessário */
+    -webkit-backdrop-filter: blur(1px);
+  }
+
+  .div1 {
+    z-index: 4;
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.652);
+    box-shadow: 10px 0px 20px rgba(255, 255, 255, 0.5); /* Ajuste os valores de deslocamento, propagação e opacidade conforme necessário */
+  }
+  
+  
+  
+#tela::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+#tela::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Cor da barra de rolagem */
+}
+
+#tela::-webkit-scrollbar-track {
+  background-color: transparent; /* Cor do fundo da barra de rolagem */
+}
+
+  .div2 {
+    z-index: 2;
+    width: 70%;
+    height: 100%; /* 100% da altura da viewport */
+
+    margin-top: 3%;
+  }
+  .container {
+    color: #ffffff;
+    width: 100%;
+    height: 100%; /* 100% da altura da tela */
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }
+  
+  .barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    background-color: #000000b6;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5); /* Ajuste os valores de deslocamento, propagação e opacidade conforme necessário */
+  }
+  
+  .icone2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .icone2:hover {
+    background-color: rgba(112, 112, 112, 0.4);
+  }
+  
+
+  .icone2.selected {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  
+  .barra-superior .icone2.selected {
+  background-color: #616161;
+  color: #ffffff;
+}
+
+  
+  .tela {
+    overflow-y: auto;
+    display: none; /* Inicia todas as telas ocultas */
+    height: 90%;
+    background-color: #00000000;
+  }
+  .tela::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+  }
+  
+  .tela::-webkit-scrollbar-track {
+    background-color: transparent; /* Cor do fundo da barra de rolagem */
+  }
+  
+  .tela::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* Cor do indicador da barra de rolagem */
+    border-radius: 4px; /* Raio de borda do indicador */
+  }
+  
+  .tela::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Cor do indicador da barra de rolagem ao passar o mouse */
+  }
+  
+  .tela::-webkit-scrollbar-thumb:active {
+    background-color: rgba(255, 255, 255, 0.7); /* Cor do indicador da barra de rolagem ao clicar */
+  }
+  
+  .upgrade {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.412);
+    transition: box-shadow 0.3s;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 2%;
+    
+  }
+  
+  .upgrade:hover {
+    box-shadow: 0 4px 8px rgb(255, 255, 255), 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .icone {
+    margin-left: 2%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  
+  .conteudo {
+    flex-grow: 1;
+  }
+  
+  .nivel {
+    font-weight: bold;
+  }
+  
+  .botao-conteudo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .valor-container {
+    margin-right: 5px;
+  }
+  
+  .botao {
+    width: 100px; /* Ajuste a largura desejada */
+    height: 70px; /* Ajuste a altura desejada */
+    padding: 0;
+    border: 2px solid #ffffff; /* Cor da borda branca */
+    border-radius: 5px; /* Adicione um leve arredondamento de borda */
+    background-color: rgba(0, 0, 0, 0.9); /* Cor de fundo preta com 90% de opacidade */
+    color: #ffffff; /* Cor do texto do botão */
+    font-size: 18px; /* Ajuste o tamanho da fonte desejado */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgb(255, 193, 7); /* Sombreamento amarelo ouro */
+    margin-right: 15px;
+  }
+  
+  .botao:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco com 30% de opacidade no hover */
+  }
+  
+  
+  .botao:active {
+    box-shadow: 0 2px 4px rgb(255, 0, 0);
+    transform: scale(0.9);
+  }
+
+
+  .container2 {
+    width: 95%;
+    position: relative;
+    margin-top: 3%;
+    margin-right: 3%;
+  }
+  
+
+  .textprofile{
+    font-size: 24px;
+    position: absolute;
+    margin-top: -1.5%;
+    right: 8%;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 50px; /* Ajuste a posição conforme necessário */
+    right: 0;
+    display: none;
+    background-color: #00000038;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+    z-index: 1;
+    margin-top: 2%;
+    margin-right: 4.7%;
+  }
+  
+  
+  .menu-item {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    background-color: #00000033;
+  }
+  
+  .container2 .menu-displayed {
+    display: block;
+    position: fixed;
+  }
+
+
+
+
+  .image-container {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    bottom: 8%;
+    right: 8%;
+    overflow: hidden;
+  }
+  
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s;
+  }
+
+  .image-container img.zoom-animation {
+    transform: scale(1.18);
+  }
+
+
+  .zoom-animation {
+    transform: scale(1.18);
+    transition: transform 0.1s;
+}
+
+
+  .background2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.301);
+  }
+  
+  .container3 {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .stone-floor {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18%;
+    background-color: #4e4e4e;
+    z-index: -100;
+    box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.8); /* Ajuste os valores de deslocamento, propagação e opacidade conforme necessário */
+  }
+  
+  .ajuste{
+    margin-top: -4.5%;
+  }
+
+  .image-container4 {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 20%;
+    right: 3.86%;
+    overflow: hidden;
+  }
+  .image-container5 {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 27%;
+    right: 3.86%;
+    overflow: hidden;
+  }
+  .image-container6 {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 34%;
+    right: 3.86%;
+    overflow: hidden;
+  }
+  
+
+  .image-container4 img,
+  .image-container5 img,
+  .image-container6 img {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .moeda {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/moeda.png');
+    background-size: cover;
+    animation: flutuar 1s ease-in-out, cair 1s linear;
+    pointer-events: none;
+  }
+
+  @keyframes flutuar {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    25% { transform: translate(-50%, -40%) rotate(180deg); }
+    50% { transform: translate(-50%, -50%) rotate(360deg); }
+    75% { transform: translate(-50%, -60%) rotate(540deg); }
+    100% { transform: translate(-50%, -50%) rotate(720deg); }
+  }
+
+  @keyframes cair {
+    0% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(calc(100% + 20px)); }
+  }
+
+
+  .moedas{
+    position: absolute;
+    right: 8%;
+    margin-top: 10.7%;
+    font-size: 24px;
+  }
+  .diamantes{
+    position: absolute;
+    right: 8%;
+    margin-top: 15.5%;
+    font-size: 24px;
+  }
+  .gemas{
+    position: absolute;
+    right: 8%;
+    margin-top: 20.9%;
+    font-size: 24px;
+  }
+  .notification {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.formdiv2{
+  z-index: 2;
+  width: 100%;
+  height: 100%; /* 100% da altura da viewport */
+  background-color: rgba(0, 0, 0, 0.342);
+  margin-top: -2.1%;
+  margin-left: 0%;
+}
+
+.divbotaoClick {
+  z-index: 3;
+  width: 70%;
+  height: 100%;
+  top: 0%;
+  left: 2%;
+  align-items: center;
+  position: absolute;
+}
+
+.botaoClick {
+  background-color: #f8d7da00;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 15%;
+  left: 40%;
+  align-items: center;
+  position: absolute;
+  margin: 0; /* Remover margem */
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+
+
+
+.profile-icon {
+  z-index: 5; /* Valor atualizado para ficar na frente dos demais */
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 62px;
+  color: #000;
+}
+
+.fas{
+  z-index: 2;
+}
