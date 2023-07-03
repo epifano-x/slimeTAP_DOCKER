@@ -47,6 +47,9 @@ Contribuições são bem-vindas! Se você encontrar problemas, tiver ideias para
 
 Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT).
 
+
+
+
 **[English]**
 
 # SlimeTAP - Docker Setup
