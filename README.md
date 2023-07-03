@@ -18,7 +18,7 @@ Siga os passos abaixo para construir a imagem Docker para o SlimeTAP:
 
 3. Navegue até o diretório do projeto que contém o Dockerfile.
 
-4. Execute o comando para construir a imagem Docker docker-compose up --build -d.
+4. Execute o comando para construir a imagem Docker `docker-compose up --build -d`.
 
 ## Executando o SlimeTAP em um Contêiner Docker
 
@@ -67,7 +67,7 @@ Follow the steps below to build the Docker image for SlimeTAP:
 
 3. Navigate to the project directory containing the Dockerfile.
 
-4. Run the command to build the Docker image docker-compose up --build -d.
+4. Run the command to build the Docker image `docker-compose up --build -d`.
 
 ## Running SlimeTAP in a Docker Container
 
