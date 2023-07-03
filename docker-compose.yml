@@ -1,0 +1,32 @@
+version: '3'
+services:
+  db_mysql:
+    container_name: db_mysql
+    build:
+      context: ./DB
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 3306:3306
+
+  webapi:
+      container_name: webapi
+      build:
+        context: ./slimeTAP-main
+        dockerfile: Dockerfile
+      restart: always
+      ports: 
+        - 60001:80
+      depends_on:
+        - db_mysql
+
+  razor:
+    container_name: razor
+    build:
+      context: ./razor
+      dockerfile: Dockerfile
+    restart: always
+    ports: 
+      - 60002:80
+    depends_on:
+      - db_mysql

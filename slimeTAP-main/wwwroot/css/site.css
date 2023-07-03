@@ -1,0 +1,93 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  color: #ffffff;
+}
+
+body {
+  
+  margin-bottom: 60px;
+  background-image: url("../img/background.jpg");
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  
+}
+
+html::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65); /* Ajuste a opacidade da máscara conforme necessário */
+  pointer-events: none;
+  backdrop-filter: blur(7px); /* Ajuste o valor do desfoque conforme necessário */
+  -webkit-backdrop-filter: blur(7px);
+}
+
+
+
+.image-container {
+  position:relative;
+  width: 350px; /* Defina a largura desejada para o contêiner da imagem */
+  height: 350px; /* Defina a altura desejada para o contêiner da imagem */
+}
+
+.image-container img {
+  position: absolute;
+  top: -20%;
+  left: 100%;
+  width: 150%; /* A imagem ocupará todo o espaço disponível no contêiner */
+  height: 150%;
+  object-fit: cover; /* A imagem será dimensionada para cobrir o contêiner */
+}
+
+.footer{
+  background-color: #242424;
+  margin-top: auto;
+}
+
+
+.play-button {
+  display: inline-block;
+  padding: 10px 70px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 0px;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.play-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.play-button:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(2px);
+}
+
